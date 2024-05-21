@@ -1,11 +1,14 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View, TouchableOpacity } from 'react-native'
 
-function Home() {
+function Home({navigation}) {
   return (
-   <Text>
-    Home Screens
-   </Text>
+    <View>
+      <Text>Home screen</Text>
+      <TouchableOpacity onPress={()=> navigation.navigate('Contact')}>
+        <Text>Go to Contact Screens</Text>
+      </TouchableOpacity>
+    </View>
   )
 }
 
