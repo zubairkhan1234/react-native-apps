@@ -8,10 +8,7 @@ function Header() {
                 <Text>
                     Hi Steven
                 </Text>
-
-                
             </View>
-
         </View>
     )
 }
