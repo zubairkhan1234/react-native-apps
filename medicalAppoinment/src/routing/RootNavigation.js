@@ -1,12 +1,14 @@
 import { NavigationContainer } from "@react-navigation/native";
 import HomeStackNavigation from "./HomeStackNavigation";
+import AuthStackNavigation from "./AuthStackNavigation";
 
 
 const  RootNavigation = () => {
     return(
         <NavigationContainer>
 
-            <HomeStackNavigation />
+            {/* <HomeStackNavigation /> */}
+<AuthStackNavigation />
         </NavigationContainer>
     )
 }
