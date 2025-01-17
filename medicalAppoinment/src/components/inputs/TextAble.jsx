@@ -1,14 +1,14 @@
 import React, { useRef } from 'react'
 import { Button, StyleSheet, TextInput, View } from 'react-native'
-import { Text } from 'react-native-svg'
+import { Text } from 'react-native'
 
-function TextAble({ label = "", onChange, placeholder }) {
+function TextAble({ label, onChange, placeholder, isPassword = false }) {
     const inputRef = useRef(null)
 
-console.log(label , onChange, placeholder )
+    console.log(label , onChange, placeholder )
     return (
         <View>
-            <Text style={styles.lableStyle}>
+            <Text>
                 {label}
             </Text>
             <TextInput
@@ -16,6 +16,7 @@ console.log(label , onChange, placeholder )
                 style={styles.inputStyle}
                 onChangeText={onChange}
                 placeholder={placeholder}
+                secureTextEntry={isPassword}
             />
         </View>
     )
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'black',
         padding: 10,
-        margin: 10
+        // margin: 10
     },
     lableStyle: {
         fontSize: 22,
