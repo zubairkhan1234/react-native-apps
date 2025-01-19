@@ -1,18 +1,15 @@
-import React, { useRef } from 'react'
-import { Button, StyleSheet, TextInput, View } from 'react-native'
+import React from 'react'
+import { StyleSheet, TextInput, View } from 'react-native'
 import { Text } from 'react-native'
 
-function TextAble({ label, onChange, placeholder, isPassword = false }) {
-    const inputRef = useRef(null)
-
-    console.log(label , onChange, placeholder )
+function InputComp({ label, onChange, placeholder, isPassword = false, defaultValue = '' }) {
     return (
         <View>
             <Text>
                 {label}
             </Text>
             <TextInput
-                ref={inputRef}
+                defaultValue={defaultValue}
                 style={styles.inputStyle}
                 onChangeText={onChange}
                 placeholder={placeholder}
@@ -22,7 +19,7 @@ function TextAble({ label, onChange, placeholder, isPassword = false }) {
     )
 }
 
-export default TextAble
+export default InputComp
 
 
 const styles = StyleSheet.create({
